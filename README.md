@@ -42,7 +42,7 @@ var html = Template(TPL, [
     }
 ]);
 
-console.log(html); // html: '<ul><li>option1</li><li>option2</li></ul>'
+console.log(html);  //html: '<ul><li>option1</li><li>option2</li></ul>'
 ```
 
 ### Example 2: josn transform to string template
@@ -72,5 +72,5 @@ var str = require('./data');
 
 var json = JSON.parse(str);
 
-console.log(json); // json: [{"text": "first","value": "first"},{"text": "second","value": "second"}]
+console.log(json);  //json: [{"text": "first","value": "first"},{"text": "second","value": "second"}]
 ```
