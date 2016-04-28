@@ -8,19 +8,19 @@ webpack loader: resource file transform to string
 
 ## Usage
 
-## webpack.config setting
+### webpack.config setting
 ``` javascript
 loaders: [ { test: /\.[name]$/, loader: "string" } ]
 ```
 
-#Example One: html transform to string template
+## Example 1: html transform to string template
 
-### webpack.config
+ webpack.config
 ``` javascript
 loaders: [ { test: /\.html$/, loader: "string" } ]
 ```
 
-###list.tpl.html
+list.tpl.html
 ``` javascript
 <ul>
     <% for(var i in list){ %>
@@ -28,30 +28,31 @@ loaders: [ { test: /\.html$/, loader: "string" } ]
     <% } %>
 </ul>
 ```
-### list.js
+list.js
 ``` javascript
-	var Template = require('template'),
-		TPL = require('./list.tpl.html');
+var Template = require('template'),
+    TPL = require('./list.tpl.html');
 
-	var html = Template(TPL, [
-		{
-			text: 'option1'
-		},
-		{
-			text: 'option2'
-		}
-	]);
+var html = Template(TPL, [
+    {
+        text: 'option1'
+    },
+    {
+        text: 'option2'
+    }
+]);
 
-	console.log(html); // html: '<ul><li>option1</li><li>option2</li></ul>'
+console.log(html); // html: '<ul><li>option1</li><li>option2</li></ul>'
 ```
-#Example Two: josn transform to string template
 
-### webpack.config
+### Example 2: josn transform to string template
+
+webpack.config
 ``` javascript
 loaders: [ { test: /\.html|\.json$/, loader: "string" } ]
 ```
 
-### data.json
+data.json
 ``` javascript
 [
   {
@@ -64,11 +65,12 @@ loaders: [ { test: /\.html|\.json$/, loader: "string" } ]
   }
 ]
 ```
-### index.js
+
+index.js
 ``` javascript
-	var str = require('./data');
+var str = require('./data');
 
-	var json = JSON.parse(str);
+var json = JSON.parse(str);
 
-	console.log(json); // json: [{"text": "first","value": "first"},{"text": "second","value": "second"}]
+console.log(json); // json: [{"text": "first","value": "first"},{"text": "second","value": "second"}]
 ```
