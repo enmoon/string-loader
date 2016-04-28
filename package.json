@@ -1,0 +1,18 @@
+{
+  "name": "string-loader",
+  "version": "0.0.1",
+  "description": "string loader for webpack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    /*"webpack": "^1.13.0"*/
+  },
+  "keywords": [
+    "webpack",
+    "toString"
+  ],
+  "author": "enmoon",
+  "license": "ISC"
+}
