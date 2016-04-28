@@ -13,7 +13,14 @@
     "type": "git",
     "url": "git+https://github.com/enmoon/string-loader.git"
   },
-  "author": "",
+  "devDependencies": {
+    /*"webpack": "^1.13.0"*/
+  },
+  "keywords": [
+    "webpack",
+    "toString"
+  ],
+  "author": "enmoon",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/enmoon/string-loader/issues"
